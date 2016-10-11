@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
-      .message { font-size: 1.3em; font-weight: bold; }
+        .message { font-size: 1.3em; font-weight: bold; }
+        div.green {color: green;}
+        input.green {border-color: green;}
+        div.red {color: red}
+        input.red {border-color: red}
     </style>
   </head>
 <body ng-app="LunchCheck">
@@ -15,12 +19,12 @@
          <div class="form-group">
              <input id="lunch-menu" type="text" ng-model="inputValue"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             class="form-control {{class}}">
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="LuchCheckButton()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message {{class}}">
            {{note}}
          </div>
    </div>
